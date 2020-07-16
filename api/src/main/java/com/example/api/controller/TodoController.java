@@ -15,6 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -22,6 +23,7 @@ import com.example.api.repository.ITodoRepository;
 import com.example.api.model.Todo;
 import org.springframework.web.bind.annotation.PutMapping;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping({ "/todo" })
 public class TodoController {
